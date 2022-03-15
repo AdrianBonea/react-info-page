@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function MainContent() {
+export default function MainContent(props) {
   // main contect function
   return (
     <main
-      className="font-inter text-white tracking-tight
-                 bg-[#282D35] bg-reactlogo bg-no-repeat
-                 bg-[right_-16rem_center] 
-                 h-screen"
+      className={`font-inter tracking-tight 
+      ${props.toggle ? "text-white" : "text-gray-800"} 
+      ${props.toggle ? "bg-[#282D35]" : "bg-white"} 
+      bg-reactlogo bg-no-repeat bg-[right_-16rem_center] h-screen`}
     >
       <h1 className="text-5xl font-bold ml-2 pt-20 px-4">
         Fun facts about React:
